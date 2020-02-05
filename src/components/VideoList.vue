@@ -1,7 +1,12 @@
 /* eslint-disable vue/valid-v-for */
 <template>
   <ul class="list-group">
-    <VideoListItem v-for="video in videos" :key="video.key" :video="video"></VideoListItem>
+    <VideoListItem
+      v-for="video in videos"
+      :key="video.key"
+      :video="video"
+      @videoSelect="onVideoSelect"
+    ></VideoListItem>
   </ul>
 </template>
 
@@ -13,7 +18,12 @@ export default {
   components: {
     VideoListItem
   },
-  props: ["videos"]
+  props: ["videos"],
+  methods: {
+    onVideoSelect(data) {
+      this.$emit("videoSelect", data);
+    }
+  }
 };
 </script>
 
