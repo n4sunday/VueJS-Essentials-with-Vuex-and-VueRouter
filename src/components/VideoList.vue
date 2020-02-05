@@ -1,6 +1,6 @@
 /* eslint-disable vue/valid-v-for */
 <template>
-  <ul>
+  <ul class="list-group">
     <VideoListItem v-for="video in videos" :key="video.key" :video="video"></VideoListItem>
   </ul>
 </template>
