@@ -1,9 +1,18 @@
 <template>
-  <div>App</div>
+  <div>
+    <AppHeader />
+  </div>
 </template>
 
 <script>
-export default {};
+import AppHeader from "./components/AppHeader";
+
+export default {
+  name: "App",
+  components: {
+    AppHeader
+  }
+};
 </script>
 
 <style lang="scss">
